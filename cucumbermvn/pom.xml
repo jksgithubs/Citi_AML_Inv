@@ -53,13 +53,13 @@
 					</dependency>
 				</dependencies>  -->
 				<executions>
-					<execution>
+					<!-- <execution>
 						<id>serenity-reports</id>
 						<phase>post-integration-test</phase>
 						<goals>
 							<goal>aggregate</goal>
 						</goals>
-					</execution>
+					</execution> -->
 				</executions>
 			</plugin>
 			<!-- <plugin>
@@ -138,11 +138,11 @@
 			<version>1.0.5</version>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 		    <groupId>net.serenity-bdd</groupId>
 		    <artifactId>serenity-reports</artifactId>
 		    <version>2.0.41</version>
-		</dependency>
+		</dependency> -->
 
 	</dependencies>
 </project>
