@@ -9,8 +9,7 @@ public class getLocators {
 		String locValue = null;
 		Connection dbConn = opnDbConn.getDBConn(null);
 		Statement locState = dbConn.createStatement();
-		ResultSet locResultSet = locState.executeQuery("SELECT LOCATOR_VAL FROM SCFF_LOCATOR_REFERENCE "
-				+ "WHERE LOCATOR_REF = '" + getLocaltorRef +"'");
+		ResultSet locResultSet = locState.executeQuery("SELECT LOCATOR_VAL FROM SCFF_LOCATOR_REFERENCE WHERE LOCATOR_REF = '" + getLocaltorRef +"'");
 		
 		while (locResultSet.next()) {
 			locValue = locResultSet.getString(1);
