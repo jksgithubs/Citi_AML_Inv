@@ -8,6 +8,7 @@ import cucumber.api.java.en.When;
 import org.brcloud.appUtils.*;
 import org.brcloud.utils.*;
 import org.brcloud.resources.*;
+import static org.brcloud.utils.actionKeywords.*;
 
 public class pocFeatureStep {
 	@Given("^Angular.org is displaying$")
@@ -15,6 +16,10 @@ public class pocFeatureStep {
 		pubConstants.bDriver = openUrl.openBrowser(getProperties.retPropertyValue("browser"));
 		openUrl.openHome("urlAngular", pubConstants.bDriver);
 		pubConstants.expTitle = "AngularJS — Superheroic JavaScript MVW Framework";
+		//Enter("ng-model", "txtEnterYourName", pubConstants.bDriver,"test");
+		//actKeys("","",pubConstants.bDriver,Keys.ENTER);
+		
+		//Enter("First Name", "JK",pubConstants.bDriver,"")
 	}
     
     @Then("^Interact with ng-model$")
