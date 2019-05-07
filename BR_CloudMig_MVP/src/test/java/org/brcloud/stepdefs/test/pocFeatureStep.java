@@ -18,8 +18,6 @@ public class pocFeatureStep {
 		pubConstants.expTitle = "AngularJS — Superheroic JavaScript MVW Framework";
 		//Enter("ng-model", "txtEnterYourName", pubConstants.bDriver,"test");
 		//actKeys("","",pubConstants.bDriver,Keys.ENTER);
-		
-		//Enter("First Name", "JK",pubConstants.bDriver,"")
 	}
     
     @Then("^Interact with ng-model$")

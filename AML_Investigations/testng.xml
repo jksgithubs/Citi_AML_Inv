@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AML_Investigation" parallel="classes" thread-count="1" verbose="5">
+  <test name="POC_Execution">
+    <classes>
+      <class name="org.citi.runners.Runner_AMLInvestigation"/>
+      <!-- <class name="org.brcloud.tests.Runner_AMLInvestigation1"/> -->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
