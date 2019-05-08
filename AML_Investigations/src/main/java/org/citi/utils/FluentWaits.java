@@ -18,7 +18,7 @@ public class FluentWaits{
 			element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 			element = wait.until(ExpectedConditions.elementToBeClickable(locator));
 		}catch(Throwable ex) {
-			ExpHandler.Handle(ex, Constants.bDriver);
+			ExpHandler.Handle(ex, PubVariables.bDriver);
 			ex.printStackTrace();
 		}
 		return element;
@@ -26,16 +26,16 @@ public class FluentWaits{
 	
 	public static WebDriver waitForPageToLoad() throws Throwable {
 	 	try {
-	 		new WebDriverWait(Constants.bDriver, Integer.parseInt(DataFromDB.Properties("timeout"))).until(
+	 		new WebDriverWait(PubVariables.bDriver, Integer.parseInt(DataFromDB.Properties("timeout"))).until(
 	 				new Function<WebDriver, Object>() {
 					public Object apply(WebDriver webDriver) {
 						return ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete");
 						}
 		          	});
 	 	}catch(Throwable ex) {
-	 		ExpHandler.Handle(ex, Constants.bDriver);
+	 		ExpHandler.Handle(ex, PubVariables.bDriver);
 	 		ex.printStackTrace();
 	 	}
-	 	return Constants.bDriver;
+	 	return PubVariables.bDriver;
 	}
 }

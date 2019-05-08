@@ -1,6 +1,6 @@
 package org.citi.appUtils;
 
-import org.citi.utils.Constants;
+import org.citi.utils.PubVariables;
 import org.citi.utils.ExpHandler;
 import org.citi.utils.Keywords;
 
@@ -10,7 +10,7 @@ public class MenuNavigation {
 			//Navigate to Menu
 			Keywords.Click(menu);
 		} catch(Throwable ex) {
-			ExpHandler.Handle(ex, Constants.bDriver);
+			ExpHandler.Handle(ex, PubVariables.bDriver);
 			ex.printStackTrace();
 		}
 	}
@@ -21,7 +21,7 @@ public class MenuNavigation {
 			Keywords.Click(menu);
 			Keywords.Click(subMenu);
 		} catch(Throwable ex) {
-			ExpHandler.Handle(ex, Constants.bDriver);
+			ExpHandler.Handle(ex, PubVariables.bDriver);
 			ex.printStackTrace();
 		}
 	}
@@ -33,7 +33,7 @@ public class MenuNavigation {
 			Keywords.Click(subMenu);
 			Keywords.Click(subSubMenu);
 		} catch(Throwable ex) {
-			ExpHandler.Handle(ex, Constants.bDriver);
+			ExpHandler.Handle(ex, PubVariables.bDriver);
 			ex.printStackTrace();
 		}
 	}

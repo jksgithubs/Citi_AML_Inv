@@ -26,7 +26,7 @@ public class ExpHandler {
 	public static void Handle(Throwable getError, WebDriver driver) throws Throwable {	
 		AppCheck.sendGET();
 		
-		if (Constants.getResponseCode==200) {
+		if (PubVariables.getResponseCode==200) {
 			for(StackTraceElement stackTraceElement : Thread.currentThread().getStackTrace()) {                         
 				errTrace = errTrace + System.lineSeparator() + stackTraceElement.toString();
 			}   
@@ -67,8 +67,8 @@ public class ExpHandler {
 				Logging.Log(getError.getLocalizedMessage()+" has occured"+errTrace);  driver.close(); Assert.fail();
 			}
 		} else {
-			Constants.bDriver.quit();
-			Constants.getResponseCode=0;
+			PubVariables.bDriver.quit();
+			PubVariables.getResponseCode=0;
 			Logging.Log("Application is unavailable, script execution is terminated!!!");
 			Logging.Log(getError.getLocalizedMessage()+" has occured"+errTrace);
 			System.exit(0);

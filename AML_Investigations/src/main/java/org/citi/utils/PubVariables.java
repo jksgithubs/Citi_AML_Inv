@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import org.openqa.selenium.WebDriver;
 
-public class Constants {
+public class PubVariables {
 	public static WebDriver bDriver; //driver
 	public static String actTitle; //to store actual page title
 	public static String expTitle; //to store expected page title

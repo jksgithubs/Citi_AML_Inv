@@ -176,7 +176,7 @@ public class DataFromDB {
 			getData = locState.executeQuery(getSql);
 			
 			ResultSetMetaData sqlRSMD = getData.getMetaData();
-			Constants.colNum = sqlRSMD.getColumnCount();
+			PubVariables.colNum = sqlRSMD.getColumnCount();
 		}catch(Throwable ex) {
 			ExpHandler.Handle(ex, null);
 			ex.printStackTrace();

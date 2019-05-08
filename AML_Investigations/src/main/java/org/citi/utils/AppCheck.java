@@ -10,11 +10,11 @@ public class AppCheck {
 			HttpURLConnection con = (HttpURLConnection) urlObj.openConnection();
 			con.setRequestMethod("GET");
 			con.setRequestProperty("User-Agent", DataFromDB.Properties("browser"));
-			Constants.getResponseCode = con.getResponseCode();
+			PubVariables.getResponseCode = con.getResponseCode();
 			con.disconnect();
-			//System.out.println("GET Response Code :: " + pubConstants.getResponseCode);
+			//System.out.println("GET Response Code :: " + Constants.getResponseCode);
 		} catch (Throwable ex) {
-			Constants.getResponseCode = 404;
+			PubVariables.getResponseCode = 404;
 		}
 	}
 }

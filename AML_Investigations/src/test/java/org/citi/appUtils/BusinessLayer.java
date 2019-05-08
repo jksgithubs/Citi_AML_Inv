@@ -1,7 +1,7 @@
 package org.citi.appUtils;
 
 import java.sql.ResultSet;
-import org.citi.utils.Constants;
+import org.citi.utils.PubVariables;
 import org.citi.utils.CurrDateTime;
 import org.citi.utils.DataFromDB;
 import org.citi.utils.Keywords;
@@ -17,7 +17,7 @@ public class BusinessLayer {
 			MenuNavigation.MenuSubMenu("lblSecurity", "mnuBusinessWorkGroup");
 			
 			//Switch to Mainframe iFrame
-			Constants.bDriver.switchTo().frame("MainFrame");
+			PubVariables.bDriver.switchTo().frame("MainFrame");
 			
 			//Click Create New Business Work Group button
 			Keywords.Click("btnAddNew");
@@ -60,7 +60,7 @@ public class BusinessLayer {
 			ErrorHandler.DataExisting(getData.getString(1), "A Business Work Group already exists with this name!");
 
 			//Switch back to parent frame
-			Constants.bDriver.switchTo().parentFrame();
+			PubVariables.bDriver.switchTo().parentFrame();
 		}
 		getData.close();
 	}
