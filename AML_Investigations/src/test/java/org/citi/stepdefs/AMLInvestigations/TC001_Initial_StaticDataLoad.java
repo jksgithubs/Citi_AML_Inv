@@ -9,7 +9,7 @@ public class TC001_Initial_StaticDataLoad {
 	@Given("^Biller Group Member is logged in$") //Start: Scenario: Create New Business Work Group
 	public void in_Security_Business_Work_Group() throws Throwable {		
 		//Login to Revport application
-		AppLogInOut.Login("SIT");
+		AppAccess.Login();
 	}
 
 	@When("^Accural link is clicked$")
@@ -23,7 +23,7 @@ public class TC001_Initial_StaticDataLoad {
 		//Validate if Business Work Group is created
 		//AppAssertions.VerifyBWG();
 		//BusinessLayer.searchBWGroup.clear();
-		AppLogInOut.Logout();
+		AppAccess.Logout();
 		ErrorHandler.softAssertion.assertAll();
 	} //End: Scenario: Create New Business Work Group
 }

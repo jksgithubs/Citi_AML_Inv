@@ -105,7 +105,7 @@ public class DataFromDB {
 		return retValue;	 		
 	}
 	
-	public static String Env(String envName) throws Throwable{
+	public static String Url(String envName) throws Throwable{
 		try {
 			Connection dbConn = Open();
 			Statement locState = dbConn.createStatement();

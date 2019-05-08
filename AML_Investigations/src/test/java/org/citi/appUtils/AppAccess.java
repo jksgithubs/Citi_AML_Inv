@@ -2,18 +2,18 @@ package org.citi.appUtils;
 
 import org.citi.utils.*;
 
-public class AppLogInOut {
-	public static void Login(String revUrl) throws Throwable {
+public class AppAccess {
+	public static void Login() throws Throwable {
 		try {
 			//Open browser
 			Constants.bDriver = GetDriver.Get(DataFromDB.Properties("browser"));
 			
 			//Open URL
-			OpenUrl.Open(revUrl);
+			OpenUrl.Open(DataFromDB.Properties("envToUse"));
 			
 			//Enter User Name, Password and click Login button
-			Keywords.SendKeys("txtLoginId", DataFromDB.Locator("amlUserName"));
-			Keywords.SendKeys("txtPassword", DataFromDB.Locator("amlPassword"));
+			Keywords.SendKeys("txtLoginId", DataFromDB.EnvUserName(DataFromDB.Properties("envToUse")));
+			Keywords.SendKeys("txtPassword", DataFromDB.EnvPwd(DataFromDB.Properties("envToUse")));
 			Keywords.Click("btnLogIn");
 		} catch (Throwable ex) {
 			ExpHandler.Handle(ex, Constants.bDriver);

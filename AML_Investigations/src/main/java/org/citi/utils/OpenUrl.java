@@ -1,9 +1,10 @@
 package org.citi.utils;
 
 public class OpenUrl {
-	public static void Open(String getUrl) throws Throwable {
+	public static void Open(String getEnv) throws Throwable {
 		try {
-			Constants.bDriver.get(DataFromDB.Properties(getUrl));
+			String url = DataFromDB.Url(getEnv);
+			Constants.bDriver.get(url);
 			FluentWaits.waitForPageToLoad();
 		} catch (Throwable ex) {
 			ExpHandler.Handle(ex, Constants.bDriver);
