@@ -88,7 +88,71 @@ public class DataFromDB {
 		try {
 			Connection dbConn = Open();
 			Statement locState = dbConn.createStatement();
-			ResultSet locResultSet = locState.executeQuery("SELECT SQL_VALUE FROM REV_SQL_REFERENCE WHERE SQL_REFERENCE = '" + sqlReference +"'");
+			ResultSet locResultSet = locState.executeQuery("SELECT SQL_VALUE FROM "
+					+ Properties("sqlRef") + "WHERE SQL_REFERENCE = '" + sqlReference +"'");
+			
+			while (locResultSet.next()) {
+				retValue = locResultSet.getString(1);
+				}
+				
+			dbConn.close();
+			locResultSet.close();
+			
+		}catch(Throwable ex) {
+			ExpHandler.Handle(ex, null);
+			ex.printStackTrace();
+		}
+		return retValue;	 		
+	}
+	
+	public static String Env(String envName) throws Throwable{
+		try {
+			Connection dbConn = Open();
+			Statement locState = dbConn.createStatement();
+			ResultSet locResultSet = locState.executeQuery("SELECT ENV_URL FROM "
+					+ Properties("appEnv") + "WHERE ENV_NAME = '" + envName +"'");
+			
+			while (locResultSet.next()) {
+				retValue = locResultSet.getString(1);
+				}
+				
+			dbConn.close();
+			locResultSet.close();
+			
+		}catch(Throwable ex) {
+			ExpHandler.Handle(ex, null);
+			ex.printStackTrace();
+		}
+		return retValue;	 		
+	}
+	
+	public static String EnvUserName(String envName) throws Throwable{
+		try {
+			Connection dbConn = Open();
+			Statement locState = dbConn.createStatement();
+			ResultSet locResultSet = locState.executeQuery("SELECT ENV_USER_NAME FROM "
+					+ Properties("appEnv") + "WHERE ENV_NAME = '" + envName +"'");
+			
+			while (locResultSet.next()) {
+				retValue = locResultSet.getString(1);
+				}
+				
+			dbConn.close();
+			locResultSet.close();
+			
+		}catch(Throwable ex) {
+			ExpHandler.Handle(ex, null);
+			ex.printStackTrace();
+		}
+		return retValue;	 		
+	}
+	
+	public static String EnvPwd(String envName) throws Throwable{
+		try {
+			Connection dbConn = Open();
+			Statement locState = dbConn.createStatement();
+			ResultSet locResultSet = locState.executeQuery("SELECT ENV_PWD FROM "
+					+ Properties("appEnv") + "WHERE ENV_NAME = '" + envName +"'");
 			
 			while (locResultSet.next()) {
 				retValue = locResultSet.getString(1);
