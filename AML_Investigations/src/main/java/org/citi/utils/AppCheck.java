@@ -6,7 +6,7 @@ import java.net.URL;
 public class AppCheck {
 	public static void sendGET() throws Throwable {
 		try {
-			URL urlObj = new URL(DataFromDB.Properties("SIT"));
+			URL urlObj = new URL(DataFromDB.Url(DataFromDB.Properties("envToUse")));
 			HttpURLConnection con = (HttpURLConnection) urlObj.openConnection();
 			con.setRequestMethod("GET");
 			con.setRequestProperty("User-Agent", DataFromDB.Properties("browser"));
