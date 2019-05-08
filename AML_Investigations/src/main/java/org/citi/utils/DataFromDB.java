@@ -168,11 +168,12 @@ public class DataFromDB {
 		return retValue;	 		
 	}
 	
-	public static ResultSet TestData(String getSQL) throws Throwable{
+	public static ResultSet TestData(String sqlReference) throws Throwable{
 		try {			
+			String getSql = DataFromDB.SQL(sqlReference);
 			Connection dbConn = Open();
 			Statement locState = dbConn.createStatement();
-			getData = locState.executeQuery(getSQL);
+			getData = locState.executeQuery(getSql);
 			
 			ResultSetMetaData sqlRSMD = getData.getMetaData();
 			Constants.colNum = sqlRSMD.getColumnCount();

@@ -9,7 +9,7 @@ import org.citi.utils.Keywords;
 public class BusinessLayer {
 	public static void CreateBWG() throws Throwable {
 		//get TestData to copy entitlement group
-		ResultSet getData = DataFromDB.TestData(DataFromDB.SQL("newBWG"));
+		ResultSet getData = DataFromDB.TestData("newBWG");
 		
 		//copy and create entitlement group
 		while (getData.next()) {
