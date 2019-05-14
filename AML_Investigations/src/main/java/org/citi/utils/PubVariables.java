@@ -16,4 +16,9 @@ public class PubVariables {
 	public static int rowNum = 0; //to store row number of result set
 	//public static String clientType; //to store created Client Type
 	//public static String bankName; //to store created Bank Name
+	
+	public static WebDriver getDriver() throws Throwable {
+		bDriver = FluentWaits.waitForPageToLoad();
+		return bDriver;
+	}
 }
