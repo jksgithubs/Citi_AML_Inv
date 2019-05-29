@@ -1,229 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="18" passed="18">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="5801" started-at="2019-05-14T08:46:27Z" finished-at="2019-05-14T08:46:33Z">
+  <suite name="Suite" duration-ms="248" started-at="2019-05-15T07:55:36Z" finished-at="2019-05-15T07:55:36Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="5801" started-at="2019-05-14T08:46:27Z" finished-at="2019-05-14T08:46:33Z">
+    <test name="Test" duration-ms="248" started-at="2019-05-15T07:55:36Z" finished-at="2019-05-15T07:55:36Z">
       <class name="org.brcloud.tests.SampleTests">
-        <test-method status="PASS" signature="setUP()[pri:0, instance:org.brcloud.tests.SampleTests@d8355a8]" name="setUP" is-config="true" duration-ms="211" started-at="2019-05-14T14:16:27Z" finished-at="2019-05-14T14:16:28Z">
+        <test-method status="FAIL" signature="setUP()[pri:0, instance:org.brcloud.tests.SampleTests@5b275dab]" name="setUP" is-config="true" duration-ms="0" started-at="2019-05-15T13:25:36Z" finished-at="2019-05-15T13:25:36Z">
+          <exception class="gherkin.TagExpression$BadTagException">
+            <message>
+              <![CDATA[Bad tag: "ScreenShots"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[gherkin.TagExpression$BadTagException: Bad tag: "ScreenShots"
+	at gherkin.TagExpression$TagExp.<init>(TagExpression.java:122)
+	at gherkin.TagExpression.add(TagExpression.java:57)
+	at gherkin.TagExpression.<init>(TagExpression.java:17)
+	at cucumber.runtime.java.JavaHookDefinition.<init>(JavaHookDefinition.java:28)
+	at cucumber.runtime.java.JavaBackend.addHook(JavaBackend.java:179)
+	at cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:66)
+	at cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:41)
+	at cucumber.runtime.java.JavaBackend.loadGlue(JavaBackend.java:86)
+	at cucumber.runtime.Runtime.<init>(Runtime.java:92)
+	at cucumber.runtime.Runtime.<init>(Runtime.java:70)
+	at cucumber.runtime.Runtime.<init>(Runtime.java:66)
+	at cucumber.api.testng.TestNGCucumberRunner.<init>(TestNGCucumberRunner.java:42)
+	at org.brcloud.tests.SampleTests.setUP(SampleTests.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- gherkin.TagExpression$BadTagException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.brcloud.tests.SampleTests@d8355a8]" name="tearDown" is-config="true" duration-ms="22" started-at="2019-05-14T14:16:33Z" finished-at="2019-05-14T14:16:33Z">
+        <test-method status="FAIL" signature="OpenMRS(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.SampleTests@5b275dab]" name="OpenMRS" duration-ms="0" started-at="2019-05-15T13:25:36Z" description="OpenMRS" data-provider="features" finished-at="2019-05-15T13:25:36Z">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:143)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at org.brcloud.tests.SampleTests.getFeatures(SampleTests.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:117)
+	... 9 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenMRS -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:org.brcloud.tests.SampleTests@5b275dab]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-05-15T13:25:36Z" finished-at="2019-05-15T13:25:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.brcloud.tests.SampleTests -->
-      <class name="org.brcloud.tests.RevPortTest">
-        <test-method status="PASS" signature="setUP()[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="setUP" is-config="true" duration-ms="281" started-at="2019-05-14T14:16:27Z" finished-at="2019-05-14T14:16:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="210" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Different Accural Calculations]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="17" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Revport Security Copy group]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="25" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Create new workflow group]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="23" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Create new calendar]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="7" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Create New Fee Type]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="7" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Create New General Ledger Type]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="15" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Create new Hierarchy account]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="19" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Create new holiday calendar]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="12" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Create new market value]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="24" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Create new users]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="152" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Create new static data list]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="8" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Create new workflow group]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="5" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Generate Invoice]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="4" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Create New Business work group]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="4" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Create new workflow narrative]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="8" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Posting an invoice]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="8" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Viewing the Accounting Tables]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="RevPort(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="RevPort" duration-ms="5" started-at="2019-05-14T14:16:28Z" description="RevPort" data-provider="features" finished-at="2019-05-14T14:16:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Setup workflow orders]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RevPort -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.brcloud.tests.RevPortTest@27efef64]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-05-14T14:16:28Z" finished-at="2019-05-14T14:16:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- org.brcloud.tests.RevPortTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

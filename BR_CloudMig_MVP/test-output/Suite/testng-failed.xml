@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" verbose="5" name="Failed suite [Suite]" parallel="classes">
+<suite thread-count="1" verbose="5" name="Failed suite [Suite]" parallel="classes">
+  <listeners>
+    <listener class-name="org.brcloud.utils.RunnerListener"/>
+  </listeners>
   <test name="Test(failed)" parallel="classes">
     <classes>
-      <class name="org.brcloud.tests.RevPortTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUP"/>
-        </methods>
-      </class> <!-- org.brcloud.tests.RevPortTest -->
       <class name="org.brcloud.tests.SampleTests">
         <methods>
-          <include name="OpenMRS" invocation-numbers="0"/>
+          <include name="OpenMRS"/>
           <include name="setUP"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- org.brcloud.tests.SampleTests -->
     </classes>

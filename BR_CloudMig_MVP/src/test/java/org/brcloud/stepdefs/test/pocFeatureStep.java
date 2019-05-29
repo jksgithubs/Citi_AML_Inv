@@ -1,6 +1,10 @@
 package org.brcloud.stepdefs.test;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -8,16 +12,14 @@ import cucumber.api.java.en.When;
 import org.brcloud.appUtils.*;
 import org.brcloud.utils.*;
 import org.brcloud.resources.*;
-//import static org.brcloud.utils.actionKeywords.*;
+//import cucumber.api.
 
 public class pocFeatureStep {
 	@Given("^Angular.org is displaying$")
 	public void angular_org_is_displaying() throws Throwable {
 		pubConstants.bDriver = openUrl.openBrowser(getProperties.retPropertyValue("browser"));
 		openUrl.openHome("urlAngular", pubConstants.bDriver);
-		pubConstants.expTitle = "AngularJS — Superheroic JavaScript MVW Framework";
-		//Enter("ng-model", "txtEnterYourName", pubConstants.bDriver,"test");
-		//actKeys("","",pubConstants.bDriver,Keys.ENTER);
+		pubConstants.expTitle = "AngularJS — Superheroic JavaScript MVW Frameworks";
 	}
     
     @Then("^Interact with ng-model$")
@@ -43,6 +45,7 @@ public class pocFeatureStep {
     public void validate_entered_name() throws Throwable{ 	
 		pubConstants.rootSelector = "[app-run=\"hello.html\"]";
 		//actionKeywords.actAssertEquals("ng-model", "txtEnterYourName", pubConstants.bDriver, "Selenium");
+		pubConstants.sa.assertAll();
     }
     
 	@Given("^google.com is displaying$")
@@ -67,6 +70,28 @@ public class pocFeatureStep {
     
     @And("^quit the browser$")
     public void quit_the_browser() throws Throwable{    	
-    	pubConstants.bDriver.quit();
+    	//pubConstants.bDriver.quit();
+    	//pubConstants.sa.assertAll();
+    }
+    
+    //@AfterStep
+    //public void chkSteps() {
+    	
+    //}
+    
+    @After
+    public void generate_screenshot(Scenario feaScenario) {
+    	pubConstants.sa.assertAll();
+    	System.out.println("In After...");
+    	//pubConstants.sa.
+    	
+    	if (feaScenario.isFailed()) {	    	
+    		feaScenario.write(feaScenario.getName()+" Failed");
+    		
+    		// Take a screenshot...
+	    	final byte[] scrCapture = ((TakesScreenshot) pubConstants.bDriver).getScreenshotAs(OutputType.BYTES);
+	    	feaScenario.embed(scrCapture, "image/png"); // ... and embed it in the report.
+	    }
+    	//pubConstants.sa.assertAll();
     }  
 }

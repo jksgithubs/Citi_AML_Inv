@@ -17,6 +17,7 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.remote.UnreachableBrowserException;
 import org.openqa.selenium.safari.ConnectionClosedException;
 import org.testng.Assert;
+//import org.testng.asserts.SoftAssert;
 //import org.testng.AssertJUnit;
 import org.openqa.selenium.NoSuchSessionException;
 import org.openqa.selenium.ScriptTimeoutException;
@@ -49,9 +50,9 @@ public class expHandler {
 				logger.log(getError.getLocalizedMessage()+" has occured"+errTrace); driver.close(); Assert.fail();
 			} else if (getError instanceof WebDriverException) {
 				logger.log(getError.getLocalizedMessage()+" has occured"+errTrace); driver.close(); Assert.fail();		
-			} /*else if (getError instanceof ComparisonFailure) {
+			} else if (getError instanceof AssertionError) {
 				logger.log(getError.getLocalizedMessage()+" has occured"+errTrace);
-			}*/ else if (getError instanceof SQLDataException) {
+			} else if (getError instanceof SQLDataException) {
 				logger.log(getError.getLocalizedMessage()+" has occured"+errTrace);
 			} else if (getError instanceof SQLException) {
 				logger.log(getError.getLocalizedMessage()+" has occured"+errTrace);

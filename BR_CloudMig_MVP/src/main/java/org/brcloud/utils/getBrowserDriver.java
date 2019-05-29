@@ -10,7 +10,7 @@ public class getBrowserDriver {
 		
 		switch (getBrowserName) {
 		case "Chrome": 
-			System.setProperty("webdriver.chrome.driver","src\\main\\resources\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","src\\main\\resources\\chromedriverV2.46.exe");
 			driver = new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			driver.manage().window().maximize();

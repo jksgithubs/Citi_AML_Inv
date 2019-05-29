@@ -3,6 +3,7 @@ package org.brcloud.utils;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import org.openqa.selenium.WebDriver;
+import org.testng.asserts.SoftAssert;
 
 public class pubConstants {
 	//RevPort shared variables
@@ -19,6 +20,8 @@ public class pubConstants {
 	public static ResultSet dataResultSet;
 	public static int colNum = 0;
 	public static int rowNum = 0;
+	
+	public static SoftAssert sa = new SoftAssert();
 	
 	//CCM shared variables
 	

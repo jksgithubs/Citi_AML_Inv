@@ -2,6 +2,8 @@ package org.brcloud.utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+//import org.testng.asserts.SoftAssert;
+
 //import static org.junit.Assert.assertEquals;
 //import org.testng.Assert;
 import static org.testng.Assert.assertEquals;
@@ -36,7 +38,7 @@ public class actionKeywords {
 		WebElement getEle = null;
 		try {
 			getEle = retElements.getElement(locName, locValue, driver);
-			assertEquals(getEle.getAttribute("value"), value);
+			pubConstants.sa.assertEquals(getEle.getAttribute("value"), value);
 		} catch (Throwable ex) {
 			expHandler.cmnExpHandler(ex, driver);
 			ex.printStackTrace();
@@ -45,8 +47,9 @@ public class actionKeywords {
 	
 	public static void actVerifyPageTitle(WebDriver driver, String expTitle) throws Throwable {
 		try {
+			//pubConstants.sa = new SoftAssert();
 			pubConstants.actTitle = driver.getTitle();
-			assertEquals(pubConstants.actTitle, expTitle);
+			pubConstants.sa.assertEquals(pubConstants.actTitle, expTitle);
 		}catch (Throwable ex) {
 			expHandler.cmnExpHandler(ex, driver);
 			ex.printStackTrace();
