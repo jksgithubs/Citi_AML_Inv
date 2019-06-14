@@ -19,7 +19,7 @@ public class pocFeatureStep {
 	public void angular_org_is_displaying() throws Throwable {
 		pubConstants.bDriver = openUrl.openBrowser(getProperties.retPropertyValue("browser"));
 		openUrl.openHome("urlAngular", pubConstants.bDriver);
-		pubConstants.expTitle = "AngularJS — Superheroic JavaScript MVW Frameworks";
+		pubConstants.expTitle = "AngularJS — Superheroic JavaScript MVW Framework";
 	}
     
     @Then("^Interact with ng-model$")
@@ -70,7 +70,7 @@ public class pocFeatureStep {
     
     @And("^quit the browser$")
     public void quit_the_browser() throws Throwable{    	
-    	//pubConstants.bDriver.quit();
+    	pubConstants.bDriver.quit();
     	//pubConstants.sa.assertAll();
     }
     

@@ -1,19 +1,19 @@
 package org.brcloud.tests;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+//import org.openqa.selenium.OutputType;
+//import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.testng.ITestResult;
+//import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.annotations.AfterMethod;
+//import org.testng.annotations.AfterMethod;
 import cucumber.api.CucumberOptions;
-import cucumber.api.Scenario;
+//import cucumber.api.Scenario;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
-import cucumber.api.java.After;
+//import cucumber.api.java.After;
  
 @CucumberOptions(
 		features="src/test/resources/features/test",

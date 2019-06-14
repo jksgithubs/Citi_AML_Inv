@@ -101,7 +101,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.brcloud.tests.SampleTests" hash-for-method="OpenMRS">OpenMRS</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.brcloud.tests.SampleTests" hash-for-method="OpenMRS(Validation of Angular and Non-Angular Interactions)">OpenMRS(Validation of Angular and Non-Angular Interactions)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -124,50 +124,55 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="OpenMRS">
-                  </a> <!-- OpenMRS -->
+                  <a name="OpenMRS(Validation of Angular and Non-Angular Interactions)">
+                  </a> <!-- OpenMRS(Validation of Angular and Non-Angular Interactions) -->
                   <span class="method-name">OpenMRS</span>
-                  <div class="stack-trace"><b>"java.lang.RuntimeException: java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:143)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: java.lang.NullPointerException
-	at org.brcloud.tests.SampleTests.getFeatures(SampleTests.java:41)
+                  <span class="parameters">(Validation of Angular and Non-Angular Interactions)</span>
+                  <div class="stack-trace"><b>"cucumber.runtime.CucumberException: java.lang.AssertionError: The following asserts failed:
+null
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at org.brcloud.tests.SampleTests.OpenMRS(SampleTests.java:37)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:117)
-	... 9 more
-<br/> java.lang.RuntimeException: java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:143)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: java.lang.NullPointerException
-	at org.brcloud.tests.SampleTests.getFeatures(SampleTests.java:41)
+Caused by: java.lang.AssertionError: The following asserts failed:
+null
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)
+	at org.brcloud.stepdefs.test.pocFeatureStep.validate_entered_name(pocFeatureStep.java:48)
+	at ?.And Validate Entered Name(pocFeature.feature:10)
+<br/> cucumber.runtime.CucumberException: java.lang.AssertionError: The following asserts failed:
+null
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at org.brcloud.tests.SampleTests.OpenMRS(SampleTests.java:37)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:117)
-	... 9 more
-"</b><br>org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:143)<br>org.testng.internal.Parameters.handleParameters(Parameters.java:426)<br>org.testng.internal.Invoker.handleParameters(Invoker.java:1383)<br>org.testng.internal.Invoker.createParameters(Invoker.java:1075)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)<br>java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)<br>java.lang.Thread.run(Unknown Source)<br>
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.AssertionError: The following asserts failed:
+null
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)
+	at org.brcloud.stepdefs.test.pocFeatureStep.validate_entered_name(pocFeatureStep.java:48)
+	at ?.And Validate Entered Name(pocFeature.feature:10)
+"</b><br>cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)<br>org.brcloud.tests.SampleTests.OpenMRS(SampleTests.java:37)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)<br>java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)<br>java.lang.Thread.run(Unknown Source)<br>
 </div> <!-- stack-trace -->
                   <em>
 (OpenMRS)                  </em>
@@ -185,9 +190,6 @@ Caused by: java.lang.NullPointerException
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;1&quot; verbose=&quot;5&quot; name=&quot;Suite&quot; parallel=&quot;classes&quot;&gt;
-  &lt;listeners&gt;
-    &lt;listener class-name=&quot;org.brcloud.utils.RunnerListener&quot;/&gt;
-  &lt;/listeners&gt;
   &lt;test name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;org.brcloud.tests.SampleTests&quot;/&gt;
@@ -234,12 +236,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'OpenMRS')
 data.setCell(0, 2, 'org.brcloud.tests.SampleTests')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 19712);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 19 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -267,11 +269,19 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">org.brcloud.tests.SampleTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">setUP</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">OpenMRS(Validation of Angular and Non-Angular Interactions)</span>
+                <span class="method-start">688 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">20402 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 //import static org.junit.Assert.assertEquals;
 //import org.testng.Assert;
-import static org.testng.Assert.assertEquals;
+//import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.Keys;
 
