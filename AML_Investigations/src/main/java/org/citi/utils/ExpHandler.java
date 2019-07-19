@@ -17,9 +17,9 @@ import org.openqa.selenium.safari.ConnectionClosedException;
 import org.testng.Assert;
 import org.openqa.selenium.NoSuchSessionException;
 //import org.openqa.selenium.OutputType;
-import org.openqa.selenium.ScriptTimeoutException;
 //import org.openqa.selenium.TakesScreenshot;
 //import cucumber.api.Scenario;
+import org.openqa.selenium.ScriptTimeoutException;
 
 public class ExpHandler {
 	public static String errTrace = "";
@@ -29,8 +29,8 @@ public class ExpHandler {
 		if (PubVariables.getResponseCode==200) {
 			for(StackTraceElement stackTraceElement : Thread.currentThread().getStackTrace()) {                         
 				errTrace = errTrace + System.lineSeparator() + stackTraceElement.toString();
-			}   
-						
+			}
+
 			if (getError instanceof NullPointerException) {
 				Logging.Log(getError.getLocalizedMessage()+" has occured"+errTrace); driver.close(); Assert.fail();
 			} else if (getError instanceof ConnectionClosedException) {
