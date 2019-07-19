@@ -24,7 +24,7 @@ public class sendEmail {
 		props.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory"); //set socket factory
 		props.put("mail.smtp.auth", "true"); //set the authentication to true
 		props.put("mail.smtp.port", "465"); //set the port of SMTP server
-	 
+		
 		Session session = Session.getDefaultInstance(props,
 				new javax.mail.Authenticator() {
 					protected PasswordAuthentication getPasswordAuthentication() {
