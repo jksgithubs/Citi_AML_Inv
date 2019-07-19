@@ -20,7 +20,7 @@ import org.apache.poi.ss.usermodel.Row;
 
 public class xlCompare {
 	static Boolean check = false;
-
+	
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	public void Compare(InputStream source, InputStream target) throws Exception {
 		try {
