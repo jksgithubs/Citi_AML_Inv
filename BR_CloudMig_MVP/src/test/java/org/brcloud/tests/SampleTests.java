@@ -14,6 +14,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 //import cucumber.api.java.After;
+import org.brcloud.utils.sendEmail;
  
 @CucumberOptions(
 		features="src/test/resources/features/test",
@@ -43,7 +44,8 @@ public class SampleTests {
 	@AfterClass
 	public void tearDown(){
 		testRunner.finish();
-		//System.out.println("TD");
+		System.out.println("Check!!!");
+		sendEmail.Send();
 	}
 	
 	/*@After

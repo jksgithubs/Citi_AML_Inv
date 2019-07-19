@@ -28,7 +28,7 @@ public class sendEmail {
 		Session session = Session.getDefaultInstance(props,
 				new javax.mail.Authenticator() {
 					protected PasswordAuthentication getPasswordAuthentication() {
-					return new PasswordAuthentication("add your email", "add your password");
+					return new PasswordAuthentication("hellojk", "jaikar13");
 				}
 			});
 		
@@ -41,8 +41,8 @@ public class sendEmail {
 			BodyPart msgBody = new MimeBodyPart(); //create object to add multimedia type content
 			msgBody.setText("This is message body"); //set email body
 	 
-				MimeBodyPart fileBody = new MimeBodyPart(); //create another object to add another content
-			String filename = "D:\\a.xlsx"; //file to be sent
+			MimeBodyPart fileBody = new MimeBodyPart(); //create another object to add another content
+			String filename = "D:\\JKs Computer\\@GitRepo\\BR_CloudMig_MVP\\target\\cucumber-reports\\advanced-reports\\cucumber-html-reports\\report-tag_Features.html"; //file to be sent
 			DataSource source = new FileDataSource(filename); //create data source and pass the filename
 			fileBody.setDataHandler(new DataHandler(source)); //set the handler
 			fileBody.setFileName(filename); //set the file
