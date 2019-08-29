@@ -3,14 +3,13 @@ package org.citi.stepdefs.AMLInvestigations;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.citi.appUtils.*;
-import org.citi.utils.DataFromDB;
+//import org.citi.appUtils.*;
+//import org.citi.utils.DataFromDB;
 import org.citi.utils.GetDriver;
 import org.citi.utils.OpenUrl;
 import org.citi.utils.PubVariables;
-import org.openqa.selenium.By;
-
-import static org.citi.utils.PubVariables.*;
+//import org.openqa.selenium.By;
+//import static org.citi.utils.PubVariables.*;
 import static org.citi.utils.ReadProperties.*;
 
 public class TC001_Initial_StaticDataLoad {
@@ -21,15 +20,6 @@ public class TC001_Initial_StaticDataLoad {
 		
 		System.out.println(GetLocator("browser"));
 		System.out.println(GetLocator("url"));
-		
-		String test = "Enter JeyaKarthi, in First Name";
-		String test1 = "Enter Ramachandran, in Last Name";
-		String test3 = "Select Values are too much, in Select Value";
-		String test4 = "Check Male, in Gender";
-		String test5 = "Click Submit";
-		String test6 = "Click Poke Me";
-		String test7 = "KeyPress Keys.ENTER, in Search";
-		String test8 = "Open https://www.google.com";
 		
 		//Open browser
 		PubVariables.bDriver = GetDriver.Get(GetLocator("browser"));

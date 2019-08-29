@@ -12,7 +12,6 @@ public class fluWaits{
 	protected static WebDriver driver;
 	public static WebElement getVisibleElement(By locator, WebDriver driver) throws Throwable {
 		WebElement element = null;
-		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(fluWaits.waitForPageToLoad(driver), Integer.parseInt(getProperties.retPropertyValue("timeout")));
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		return element;
@@ -20,13 +19,11 @@ public class fluWaits{
 	
 	public static WebElement getClickableElement(By locator, WebDriver driver) throws Throwable {
 		WebElement element = null;
-	 	@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(fluWaits.waitForPageToLoad(driver), Integer.parseInt(getProperties.retPropertyValue("timeout")));
 	 	element = wait.until(ExpectedConditions.elementToBeClickable(locator));
 	 	return element;
 	}
 	
-	@SuppressWarnings("deprecation")
 	public static WebDriver waitForPageToLoad(WebDriver driver) throws Throwable {
 	 	new WebDriverWait(driver, Integer.parseInt(getProperties.retPropertyValue("timeout"))).until(
 	 	          new Function<WebDriver, Object>() {
