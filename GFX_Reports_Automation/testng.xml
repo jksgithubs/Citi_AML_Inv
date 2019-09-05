@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="GFX_Reports_Testing" parallel="classes" thread-count="3" verbose="5">
+  <test name="GFX_Reports_Regression">
+    <classes>
+      <class name="org.citi.gfx.runners.GFX_UIValidation"/>
+      <class name="org.citi.gfx.runners.GFX_ReportsValidation"/>
+      <class name="org.citi.gfx.runners.GFX_DataLogicValidation"/>
+    </classes>
+  </test>
+</suite>
