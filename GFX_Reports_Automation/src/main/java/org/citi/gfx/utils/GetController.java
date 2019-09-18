@@ -22,7 +22,7 @@ public class GetController {
 				if (getValue.contains("Y")) {
 					getReports.add(getKey);
 				}
-			} 
+			}
 		}
 		confReader.close();
 		return getReports;

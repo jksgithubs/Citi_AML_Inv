@@ -18,14 +18,14 @@ import javax.mail.internet.MimeMultipart;
 
 public class sendEmail {
 	public static void Send() {
-		Properties props = new Properties(); //create object of Property file
-		props.put("mail.smtp.host", "smtp.gmail.com"); //set host of server
-		props.put("mail.smtp.socketFactory.port", "465"); //set the port of socket factory
-		props.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory"); //set socket factory
-		props.put("mail.smtp.auth", "true"); //set the authentication to true
-		props.put("mail.smtp.port", "465"); //set the port of SMTP server
+		Properties eProps = new Properties(); //create object of Property file
+		eProps.put("mail.smtp.host", "smtp.gmail.com"); //set host of server
+		eProps.put("mail.smtp.socketFactory.port", "465"); //set the port of socket factory
+		eProps.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory"); //set socket factory
+		eProps.put("mail.smtp.auth", "true"); //set the authentication to true
+		eProps.put("mail.smtp.port", "465"); //set the port of SMTP server
 		
-		Session session = Session.getDefaultInstance(props,
+		Session session = Session.getDefaultInstance(eProps,
 				new javax.mail.Authenticator() {
 					protected PasswordAuthentication getPasswordAuthentication() {
 					return new PasswordAuthentication("hellojk", "jaikar13");
