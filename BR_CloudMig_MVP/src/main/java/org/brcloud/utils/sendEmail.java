@@ -47,7 +47,7 @@ public class sendEmail {
 			fileBody.setDataHandler(new DataHandler(source)); //set the handler
 			fileBody.setFileName(filename); //set the file
 	 
-				Multipart multipart = new MimeMultipart(); //create object of MimeMultipart class
+			Multipart multipart = new MimeMultipart(); //create object of MimeMultipart class
 			multipart.addBodyPart(msgBody); //add msgBody
 			multipart.addBodyPart(fileBody); // add fileBody
 			message.setContent(multipart); //set the content

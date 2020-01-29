@@ -13,13 +13,17 @@ import static org.citi.gfx.utils.GlobalVariables.*;
 
 @CucumberOptions(
 		features="src/test/resources/features/logics",
-		glue={"org.citi.gfx.stepdefs.logics"}
+		glue={"org.citi.gfx.stepdefs.logics"},
+		plugin= {"pretty",
+				"html:target/cucumber-reports/cucumber-pretty",
+				"json:target/cucumber-reports/CucumberTestReport.json",
+				"rerun:target/cucumber-reports/re-run.txt"}
 		)
 
 public class GFX_DataLogicValidation {
 	//public static WebDriver driver;
 	private TestNGCucumberRunner logicRunner;
-	
+
 	@BeforeClass
 	public void setUP() throws Throwable {
 		logicRunner = new TestNGCucumberRunner(GFX_DataLogicValidation.class);
@@ -38,7 +42,6 @@ public class GFX_DataLogicValidation {
 	public Object[][] getScenarios() {
 		return logicRunner.provideScenarios();
 	}
-	
 	@AfterClass
 	public void tearDown() throws Throwable {
 		logicRunner.finish();

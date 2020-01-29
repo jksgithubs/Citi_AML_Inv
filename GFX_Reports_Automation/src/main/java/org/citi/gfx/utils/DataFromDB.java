@@ -37,6 +37,10 @@ public class DataFromDB {
 			MongoDatabase mongoDB = openConn.getDatabase("GFX_AUTOMATION");
 			MongoCollection<Document> collection = mongoDB.getCollection("REPOSITORY");
 			
+			if (openConn.getAddress() == null) {
+				
+			}
+			
 			getLocatorValue = collection.find(eq("LOCATOR_REFERENCE", locReference)
 					).projection(
 							Projections.include("LOCATOR_VALUE")

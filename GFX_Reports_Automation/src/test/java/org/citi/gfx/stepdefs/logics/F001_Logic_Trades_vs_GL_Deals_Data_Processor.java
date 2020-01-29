@@ -12,7 +12,7 @@ import static org.citi.gfx.apputils.MenuNavigation.*;
 import static org.citi.gfx.utils.Keywords.*;
 
 public class F001_Logic_Trades_vs_GL_Deals_Data_Processor {	
-	@Given("^Logged into GFX for Trades vs GL Deals and Data Processor$")
+	@Given("^Logged into GFX for Trades vs GL Deals and Data Processors$")
 	public void Logged_into_GFX_for_Trades_vs_GL_Deals_and_Data_Processor() throws Throwable {
 		boolean getReports = getReportsData.contains("RPT_TradesvsGLDealsAndDataProcessor");
 		if(!getReports) {
